@@ -1,0 +1,4 @@
+# Files run inside the Linux container must keep Unix line endings
+*.sh text eol=lf
+Dockerfile text eol=lf
+docker-compose.yml text eol=lf

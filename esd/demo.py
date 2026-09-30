@@ -22,10 +22,11 @@ MEMORY_CODE = ["esd/extractor.py", "esd/revision.py", "esd/graph_store.py", "esd
 
 def background_hash() -> str:
     """Fingerprint of the background life, the memory-writing code and the models."""
-    h = hashlib.sha1(BACKGROUND_PATH.read_bytes())
+    # Line endings are normalised so a Windows and a Linux checkout give the same fingerprint.
+    h = hashlib.sha1(BACKGROUND_PATH.read_bytes().replace(b"\r\n", b"\n"))
     h.update(f"{config.CHAT_MODEL}|{config.EMBED_MODEL}|{config.TEMPERATURE}".encode())
     for rel in MEMORY_CODE:
-        h.update((config.ROOT / rel).read_bytes())
+        h.update((config.ROOT / rel).read_bytes().replace(b"\r\n", b"\n"))
     return h.hexdigest()[:12]
 
 

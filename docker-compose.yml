@@ -1,0 +1,29 @@
+# Coolify: deploy with the "Docker Compose" build pack.
+# The only environment variable you set in Coolify is OPENAI_API_KEY.
+services:
+  esd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      # Required. Add it in Coolify > Environment Variables.
+      - OPENAI_API_KEY=${OPENAI_API_KEY:?}
+      # Coolify magic variable: generates a URL for this service and routes it to port 8501.
+      - SERVICE_FQDN_ESD_8501
+      - ESD_DATA_DIR=/app/data
+    volumes:
+      # The app's database: memories and chats (JSON) + embedding cache (SQLite).
+      # Docker creates it on the first start and it survives redeploys.
+      - esd-data:/app/data
+    expose:
+      - "8501"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  esd-data:

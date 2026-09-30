@@ -1,0 +1,536 @@
+{
+ "edges": [
+  {
+   "id": "t_48f25ab7",
+   "s": "user",
+   "o": "backend developer",
+   "relation": "works as",
+   "added_at": "2025-01-06"
+  },
+  {
+   "id": "t_7818c889",
+   "s": "user",
+   "o": "paynest",
+   "relation": "works at",
+   "added_at": "2025-01-06"
+  },
+  {
+   "id": "t_cc9f6817",
+   "s": "paynest",
+   "o": "fintech startup",
+   "relation": "is a",
+   "added_at": "2025-01-06"
+  },
+  {
+   "id": "t_d2961787",
+   "s": "user",
+   "o": "farhan",
+   "relation": "manager of",
+   "added_at": "2025-01-06"
+  },
+  {
+   "id": "t_df36f866",
+   "s": "farhan",
+   "o": "relaxed",
+   "relation": "is",
+   "added_at": "2025-01-06"
+  },
+  {
+   "id": "t_6a7c5ea5",
+   "s": "farhan",
+   "o": "detail-oriented in code reviews",
+   "relation": "is",
+   "added_at": "2025-01-06"
+  },
+  {
+   "id": "t_b3632583",
+   "s": "user",
+   "o": "miso",
+   "relation": "has pet",
+   "added_at": "2025-01-07"
+  },
+  {
+   "id": "t_0ac3bd8a",
+   "s": "miso",
+   "o": "cat",
+   "relation": "is type of",
+   "added_at": "2025-01-07"
+  },
+  {
+   "id": "t_adbc718c",
+   "s": "miso",
+   "o": "3 years",
+   "relation": "is age",
+   "added_at": "2025-01-07"
+  },
+  {
+   "id": "t_a88bf56d",
+   "s": "miso",
+   "o": "lazy",
+   "relation": "is characteristic of",
+   "added_at": "2025-01-07"
+  },
+  {
+   "id": "t_3190f0d6",
+   "s": "user",
+   "o": "badminton",
+   "relation": "plays",
+   "added_at": "2025-01-08"
+  },
+  {
+   "id": "t_d2fe39dc",
+   "s": "user",
+   "o": "tanvir",
+   "relation": "plays with",
+   "added_at": "2025-01-08"
+  },
+  {
+   "id": "t_b4cc4c51",
+   "s": "user",
+   "o": "saturday morning",
+   "relation": "plays badminton on",
+   "added_at": "2025-01-08"
+  },
+  {
+   "id": "t_c2a97c40",
+   "s": "tanvir",
+   "o": "user",
+   "relation": "is coworker of",
+   "added_at": "2025-01-08"
+  },
+  {
+   "id": "t_14378912",
+   "s": "tanvir",
+   "o": "frontend",
+   "relation": "does",
+   "added_at": "2025-01-08"
+  },
+  {
+   "id": "t_b20df0ce",
+   "s": "tanvir",
+   "o": "paynest",
+   "relation": "works at",
+   "added_at": "2025-01-08"
+  },
+  {
+   "id": "t_91a8abe4",
+   "s": "user",
+   "o": "photography",
+   "relation": "hobby",
+   "added_at": "2025-01-09"
+  },
+  {
+   "id": "t_ab68c46d",
+   "s": "user",
+   "o": "fujifilm x-t30",
+   "relation": "uses",
+   "added_at": "2025-01-09"
+  },
+  {
+   "id": "t_e54cf49d",
+   "s": "user",
+   "o": "kacchi biryani",
+   "relation": "favorite food",
+   "added_at": "2025-01-10"
+  },
+  {
+   "id": "t_de017b89",
+   "s": "user",
+   "o": "kacchi biryani",
+   "relation": "eats",
+   "added_at": "2025-01-10"
+  },
+  {
+   "id": "t_d1a3f8ef",
+   "s": "user",
+   "o": "kacchi biryani",
+   "relation": "eats every week",
+   "added_at": "2025-01-10"
+  },
+  {
+   "id": "t_514ea7bc",
+   "s": "user",
+   "o": "mango lassi",
+   "relation": "loves",
+   "added_at": "2025-01-11"
+  },
+  {
+   "id": "t_d56d1d93",
+   "s": "mango lassi",
+   "o": "summer",
+   "relation": "preferred in",
+   "added_at": "2025-01-11"
+  },
+  {
+   "id": "t_3bcc5bce",
+   "s": "user",
+   "o": "nadia",
+   "relation": "best friend of",
+   "added_at": "2025-01-12"
+  },
+  {
+   "id": "t_6458b051",
+   "s": "nadia",
+   "o": "december",
+   "relation": "getting married in",
+   "added_at": "2025-01-12"
+  },
+  {
+   "id": "t_2f466647",
+   "s": "user",
+   "o": "japanese",
+   "relation": "learning",
+   "added_at": "2025-01-13"
+  },
+  {
+   "id": "t_77a51a51",
+   "s": "user",
+   "o": "duolingo",
+   "relation": "uses",
+   "added_at": "2025-01-13"
+  },
+  {
+   "id": "t_cc060718",
+   "s": "user",
+   "o": "60 days",
+   "relation": "has streak",
+   "added_at": "2025-01-13"
+  },
+  {
+   "id": "t_836736ad",
+   "s": "user",
+   "o": "kyoto",
+   "relation": "wants to visit",
+   "added_at": "2025-01-14"
+  },
+  {
+   "id": "t_38eab990",
+   "s": "user",
+   "o": "japanese",
+   "relation": "is learning",
+   "added_at": "2025-01-14"
+  },
+  {
+   "id": "t_8b08deb1",
+   "s": "user",
+   "o": "vs code",
+   "relation": "uses",
+   "added_at": "2025-01-14"
+  },
+  {
+   "id": "t_8c11ef31",
+   "s": "vs code",
+   "o": "dracula",
+   "relation": "has theme",
+   "added_at": "2025-01-14"
+  },
+  {
+   "id": "t_f36c3d8e",
+   "s": "user",
+   "o": "go",
+   "relation": "works with",
+   "added_at": "2025-01-15"
+  },
+  {
+   "id": "t_807477d9",
+   "s": "services",
+   "o": "aws",
+   "relation": "deployed on",
+   "added_at": "2025-01-15"
+  },
+  {
+   "id": "t_ce75aa7c",
+   "s": "user",
+   "o": "black coffee",
+   "relation": "drinks",
+   "added_at": "2025-01-16"
+  },
+  {
+   "id": "t_2a133d0e",
+   "s": "user",
+   "o": "two cups of black coffee",
+   "relation": "drinks",
+   "added_at": "2025-01-16"
+  },
+  {
+   "id": "t_806883d0",
+   "s": "user",
+   "o": "two cups a day",
+   "relation": "drinks",
+   "added_at": "2025-01-16"
+  },
+  {
+   "id": "t_d25da85c",
+   "s": "user",
+   "o": "2019 thinkpad",
+   "relation": "has",
+   "added_at": "2025-01-17"
+  },
+  {
+   "id": "t_d1b81529",
+   "s": "2019 thinkpad",
+   "o": "slow",
+   "relation": "is",
+   "added_at": "2025-01-17"
+  },
+  {
+   "id": "t_2b8bbddf",
+   "s": "user",
+   "o": "window seats",
+   "relation": "prefers",
+   "added_at": "2025-01-18"
+  },
+  {
+   "id": "t_899f7111",
+   "s": "user",
+   "o": "12 may",
+   "relation": "mother's birthday",
+   "added_at": "2025-01-19"
+  },
+  {
+   "id": "t_8f9ec802",
+   "s": "user",
+   "o": "atomic habits",
+   "relation": "reads",
+   "added_at": "2025-01-20"
+  },
+  {
+   "id": "t_9bfd2f66",
+   "s": "user",
+   "o": "gym",
+   "relation": "goes to",
+   "added_at": "2025-01-21"
+  },
+  {
+   "id": "t_c08feef6",
+   "s": "gym",
+   "o": "monday evening",
+   "relation": "on",
+   "added_at": "2025-01-21"
+  },
+  {
+   "id": "t_f4b61ea4",
+   "s": "gym",
+   "o": "wednesday evening",
+   "relation": "on",
+   "added_at": "2025-01-21"
+  },
+  {
+   "id": "t_d52a8463",
+   "s": "user",
+   "o": "horror movies",
+   "relation": "dislikes",
+   "added_at": "2025-01-22"
+  },
+  {
+   "id": "t_b82c99d0",
+   "s": "user",
+   "o": "rasmalai",
+   "relation": "favorite dessert",
+   "added_at": "2025-01-23"
+  },
+  {
+   "id": "t_2fc1ae11",
+   "s": "user",
+   "o": "baking banana bread",
+   "relation": "enjoys",
+   "added_at": "2025-01-24"
+  },
+  {
+   "id": "t_2ab75140",
+   "s": "baking banana bread",
+   "o": "sundays",
+   "relation": "happens on",
+   "added_at": "2025-01-24"
+  },
+  {
+   "id": "t_fb380916",
+   "s": "miso",
+   "o": "yearly vaccine",
+   "relation": "needs",
+   "added_at": "2025-01-25"
+  },
+  {
+   "id": "t_888f2736",
+   "s": "user",
+   "o": "35mm camera lens",
+   "relation": "saves money for",
+   "added_at": "2025-01-27"
+  },
+  {
+   "id": "t_2aab90aa",
+   "s": "user",
+   "o": "40 minutes",
+   "relation": "commute time",
+   "added_at": "2025-01-28"
+  },
+  {
+   "id": "t_45d1c807",
+   "s": "user",
+   "o": "bus",
+   "relation": "commutes by",
+   "added_at": "2025-01-28"
+  },
+  {
+   "id": "t_93a98f83",
+   "s": "nadia",
+   "o": "korean dramas",
+   "relation": "loves",
+   "added_at": "2025-01-29"
+  },
+  {
+   "id": "t_47e023db",
+   "s": "nadia",
+   "o": "recommendations",
+   "relation": "sends",
+   "added_at": "2025-01-29"
+  },
+  {
+   "id": "t_6986472a",
+   "s": "user",
+   "o": "midnight",
+   "relation": "goes to sleep around",
+   "added_at": "2025-01-30"
+  },
+  {
+   "id": "t_755b513a",
+   "s": "user",
+   "o": "payments api refactor",
+   "relation": "leads",
+   "added_at": "2025-01-31"
+  },
+  {
+   "id": "t_ee892be3",
+   "s": "farhan",
+   "o": "user",
+   "relation": "asked",
+   "added_at": "2025-01-31"
+  },
+  {
+   "id": "t_579f267e",
+   "s": "payments api",
+   "o": "end of february",
+   "relation": "refactor deadline",
+   "added_at": "2025-02-01"
+  },
+  {
+   "id": "t_bedb28ef",
+   "s": "user",
+   "o": "argentina",
+   "relation": "supports",
+   "added_at": "2025-02-02"
+  },
+  {
+   "id": "t_ba8c927f",
+   "s": "user",
+   "o": "football",
+   "relation": "is a fan of",
+   "added_at": "2025-02-02"
+  },
+  {
+   "id": "t_1f386fa7",
+   "s": "user",
+   "o": "spicy food",
+   "relation": "likes",
+   "added_at": "2025-02-03"
+  },
+  {
+   "id": "t_bb5f6ce9",
+   "s": "spicy food",
+   "o": "spicier the better",
+   "relation": "is",
+   "added_at": "2025-02-03"
+  },
+  {
+   "id": "t_29dc3ade",
+   "s": "user",
+   "o": "notion",
+   "relation": "uses",
+   "added_at": "2025-02-04"
+  },
+  {
+   "id": "t_9d06ab5b",
+   "s": "user",
+   "o": "parents",
+   "relation": "visits",
+   "added_at": "2025-02-05"
+  },
+  {
+   "id": "t_d77be17f",
+   "s": "user",
+   "o": "tea",
+   "relation": "prefers",
+   "added_at": "2025-02-06"
+  },
+  {
+   "id": "t_194a3cda",
+   "s": "user",
+   "o": "coffee",
+   "relation": "dislikes",
+   "added_at": "2025-02-06"
+  },
+  {
+   "id": "t_3b955c84",
+   "s": "user",
+   "o": "standing desk",
+   "relation": "bought",
+   "added_at": "2025-02-07"
+  },
+  {
+   "id": "t_414e45b6",
+   "s": "standing desk",
+   "o": "user's back",
+   "relation": "helps",
+   "added_at": "2025-02-07"
+  },
+  {
+   "id": "t_c0ba898f",
+   "s": "user",
+   "o": "one book per month",
+   "relation": "reads",
+   "added_at": "2025-02-08"
+  },
+  {
+   "id": "t_b4a8aa02",
+   "s": "user",
+   "o": "cox's bazar",
+   "relation": "plans trip to",
+   "added_at": "2025-02-10"
+  },
+  {
+   "id": "t_77943ace",
+   "s": "tanvir",
+   "o": "user",
+   "relation": "plans trip with",
+   "added_at": "2025-02-10"
+  },
+  {
+   "id": "t_81759310",
+   "s": "trip",
+   "o": "april",
+   "relation": "scheduled for",
+   "added_at": "2025-02-10"
+  },
+  {
+   "id": "t_cd48622e",
+   "s": "team",
+   "o": "github",
+   "relation": "uses",
+   "added_at": "2025-02-12"
+  },
+  {
+   "id": "t_957f78e3",
+   "s": "team",
+   "o": "strict pull request rules",
+   "relation": "has",
+   "added_at": "2025-02-12"
+  },
+  {
+   "id": "t_46ffb4f4",
+   "s": "user",
+   "o": "ukulele",
+   "relation": "learns",
+   "added_at": "2025-02-14"
+  }
+ ]
+}

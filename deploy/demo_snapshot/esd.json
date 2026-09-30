@@ -1,0 +1,658 @@
+{
+ "version": 36,
+ "facts": [
+  {
+   "id": "f_9f128314",
+   "kind": "fact",
+   "statement": "User works as a backend developer at a fintech startup called PayNest.",
+   "slot": "user.job",
+   "entities": [
+    "user",
+    "paynest"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-06",
+   "valid_to": null,
+   "recorded_at": "2025-01-06",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-06",
+   "source": "I work as a backend developer at a fintech startup called PayNest."
+  },
+  {
+   "id": "f_f1329a2d",
+   "kind": "fact",
+   "statement": "User's manager is Farhan, who is relaxed but very detail-oriented in code reviews.",
+   "slot": "user.job",
+   "entities": [
+    "farhan"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-06",
+   "valid_to": null,
+   "recorded_at": "2025-01-06",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-06",
+   "source": "My manager is Farhan, he's pretty relaxed but very detail-oriented in code reviews."
+  },
+  {
+   "id": "f_0f9f7808",
+   "kind": "fact",
+   "statement": "User has a cat named Miso who is three years old and very lazy.",
+   "slot": "user.cat",
+   "entities": [
+    "miso"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-07",
+   "valid_to": null,
+   "recorded_at": "2025-01-07",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-07",
+   "source": "I have a cat named Miso, she's three years old and very lazy."
+  },
+  {
+   "id": "f_e4b25f5f",
+   "kind": "fact",
+   "statement": "User plays badminton every Saturday morning with their friend Tanvir.",
+   "slot": null,
+   "entities": [
+    "user",
+    "tanvir"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-08",
+   "valid_to": null,
+   "recorded_at": "2025-01-08",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-08",
+   "source": "I play badminton every Saturday morning with my friend Tanvir."
+  },
+  {
+   "id": "f_2936025e",
+   "kind": "fact",
+   "statement": "Tanvir (user's coworker) does the frontend at PayNest.",
+   "slot": "tanvir.job",
+   "entities": [
+    "tanvir",
+    "paynest"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-08",
+   "valid_to": null,
+   "recorded_at": "2025-01-08",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-08",
+   "source": "Tanvir is also my coworker, he does the frontend at PayNest."
+  },
+  {
+   "id": "f_f13f0184",
+   "kind": "fact",
+   "statement": "User's weekend hobby is photography.",
+   "slot": "user.hobby",
+   "entities": [
+    "user"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-09",
+   "valid_to": null,
+   "recorded_at": "2025-01-09",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-09",
+   "source": "Photography is my weekend hobby. I shoot with a Fujifilm X-T30."
+  },
+  {
+   "id": "f_cef2d7d1",
+   "kind": "fact",
+   "statement": "User shoots with a Fujifilm X-T30.",
+   "slot": "user.camera",
+   "entities": [
+    "fujifilm x-t30"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-09",
+   "valid_to": null,
+   "recorded_at": "2025-01-09",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-09",
+   "source": "Photography is my weekend hobby. I shoot with a Fujifilm X-T30."
+  },
+  {
+   "id": "f_a9b62a5e",
+   "kind": "fact",
+   "statement": "User's favourite food is kacchi biryani.",
+   "slot": "user.favourite_food",
+   "entities": [
+    "kacchi biryani"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-10",
+   "valid_to": null,
+   "recorded_at": "2025-01-10",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-10",
+   "source": "My favourite food is kacchi biryani, I could eat it every week."
+  },
+  {
+   "id": "f_f702dc6d",
+   "kind": "fact",
+   "statement": "User loves mango lassi, especially in summer.",
+   "slot": "user.favourite_food",
+   "entities": [
+    "mango lassi"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-11",
+   "valid_to": null,
+   "recorded_at": "2025-01-11",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-11",
+   "source": "I love mango lassi, especially in summer."
+  },
+  {
+   "id": "f_d7557bac",
+   "kind": "event",
+   "statement": "Nadia (user's best friend) is getting married in December.",
+   "slot": null,
+   "entities": [
+    "nadia"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-12",
+   "valid_to": null,
+   "recorded_at": "2025-01-12",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-12",
+   "source": "My best friend Nadia is getting married in December."
+  },
+  {
+   "id": "f_8e220264",
+   "kind": "decision",
+   "statement": "User is learning Japanese on Duolingo and is on a 60 day streak.",
+   "slot": "user.hobby",
+   "entities": [
+    "duolingo",
+    "japanese"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-13",
+   "valid_to": null,
+   "recorded_at": "2025-01-13",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 2,
+   "last_seen": "2025-01-14",
+   "source": "I'm learning Japanese on Duolingo, I'm on a 60 day streak."
+  },
+  {
+   "id": "f_1e2f0491",
+   "kind": "fact",
+   "statement": "User wants to visit Kyoto someday.",
+   "slot": "user.favourite_food",
+   "entities": [
+    "kyoto"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-14",
+   "valid_to": null,
+   "recorded_at": "2025-01-14",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-14",
+   "source": "I want to visit Kyoto someday, that's partly why I'm learning Japanese."
+  },
+  {
+   "id": "f_ac0e3d48",
+   "kind": "decision",
+   "statement": "User uses VS Code with the Dracula theme for everything.",
+   "slot": "user.editor",
+   "entities": [
+    "vs code",
+    "dracula theme"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-14",
+   "valid_to": null,
+   "recorded_at": "2025-01-14",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-14",
+   "source": "I use VS Code with the Dracula theme for everything."
+  },
+  {
+   "id": "f_c0851a4a",
+   "kind": "decision",
+   "statement": "User's main backend language at work is Go.",
+   "slot": "user.job",
+   "entities": [
+    "go"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-15",
+   "valid_to": null,
+   "recorded_at": "2025-01-15",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-15",
+   "source": "Our main backend language at work is Go."
+  },
+  {
+   "id": "f_071d1659",
+   "kind": "decision",
+   "statement": "User deploys all their services on AWS.",
+   "slot": "user.job",
+   "entities": [
+    "aws"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-15",
+   "valid_to": null,
+   "recorded_at": "2025-01-15",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-15",
+   "source": "We deploy all our services on AWS."
+  },
+  {
+   "id": "f_d684d71a",
+   "kind": "fact",
+   "statement": "User usually drinks two cups of black coffee a day.",
+   "slot": "user.hobby",
+   "entities": [
+    "coffee"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-16",
+   "valid_to": null,
+   "recorded_at": "2025-01-16",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-16",
+   "source": "I usually drink two cups of black coffee a day."
+  },
+  {
+   "id": "f_8913a15b",
+   "kind": "event",
+   "statement": "User's mom's birthday is on 12 May.",
+   "slot": "user.mom_birthday",
+   "entities": [
+    "mom"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-19",
+   "valid_to": null,
+   "recorded_at": "2025-01-19",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-19",
+   "source": "My mom's birthday is on 12 May."
+  },
+  {
+   "id": "f_2b001bec",
+   "kind": "fact",
+   "statement": "User goes to the gym on Monday and Wednesday evenings.",
+   "slot": "user.hobby",
+   "entities": [
+    "gym"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-21",
+   "valid_to": null,
+   "recorded_at": "2025-01-21",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-21",
+   "source": "I go to the gym on Monday and Wednesday evenings."
+  },
+  {
+   "id": "f_25972e6f",
+   "kind": "fact",
+   "statement": "User's favourite dessert is rasmalai.",
+   "slot": "user.favourite_food",
+   "entities": [
+    "rasmalai"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-23",
+   "valid_to": null,
+   "recorded_at": "2025-01-23",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-23",
+   "source": "My favourite dessert is rasmalai."
+  },
+  {
+   "id": "f_d8a81c9a",
+   "kind": "fact",
+   "statement": "User enjoys baking banana bread on Sundays.",
+   "slot": "user.hobby",
+   "entities": [
+    "banana bread"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-24",
+   "valid_to": null,
+   "recorded_at": "2025-01-24",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-24",
+   "source": "I also enjoy baking banana bread on Sundays."
+  },
+  {
+   "id": "f_6cebab97",
+   "kind": "event",
+   "statement": "Miso (user's cat) needs her yearly vaccine next month.",
+   "slot": "user.cat",
+   "entities": [
+    "miso"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-01",
+   "valid_to": null,
+   "recorded_at": "2025-01-25",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-25",
+   "source": "Miso needs her yearly vaccine next month."
+  },
+  {
+   "id": "f_559fc8b9",
+   "kind": "decision",
+   "statement": "User is saving money for a new 35mm camera lens.",
+   "slot": "user.camera",
+   "entities": [
+    "camera lens"
+   ],
+   "triggers": [
+    "photography",
+    "camera equipment",
+    "lens purchase",
+    "budgeting for photography",
+    "upgrading camera gear",
+    "saving for photography accessories"
+   ],
+   "valid_from": "2025-01-27",
+   "valid_to": null,
+   "recorded_at": "2025-01-27",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-27",
+   "source": "I'm saving money for a new 35mm camera lens."
+  },
+  {
+   "id": "f_659f6cad",
+   "kind": "fact",
+   "statement": "Nadia loves Korean dramas.",
+   "slot": null,
+   "entities": [
+    "nadia"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-29",
+   "valid_to": null,
+   "recorded_at": "2025-01-29",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-29",
+   "source": "Nadia loves Korean dramas, she keeps sending me recommendations."
+  },
+  {
+   "id": "f_83b47b2c",
+   "kind": "decision",
+   "statement": "User will lead the payments API refactor.",
+   "slot": null,
+   "entities": [
+    "farhan"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-31",
+   "valid_to": null,
+   "recorded_at": "2025-01-31",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-01-31",
+   "source": "Farhan asked me to lead the payments API refactor."
+  },
+  {
+   "id": "f_27991970",
+   "kind": "constraint",
+   "statement": "The payments API refactor has to be done by the end of February.",
+   "slot": "project.deadline",
+   "entities": [],
+   "triggers": [
+    "payments API refactor",
+    "project deadlines",
+    "software development",
+    "API changes",
+    "team meetings",
+    "sprint planning"
+   ],
+   "valid_from": "2025-02-01",
+   "valid_to": null,
+   "recorded_at": "2025-02-01",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-01",
+   "source": "The payments API refactor has to be done by the end of February."
+  },
+  {
+   "id": "f_0d0bf96d",
+   "kind": "fact",
+   "statement": "User is a big football fan and supports Argentina.",
+   "slot": null,
+   "entities": [
+    "user",
+    "argentina"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-02",
+   "valid_to": null,
+   "recorded_at": "2025-02-02",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-02",
+   "source": "I'm a big football fan and I support Argentina."
+  },
+  {
+   "id": "f_150ae2cc",
+   "kind": "fact",
+   "statement": "User likes spicy food, the spicier the better.",
+   "slot": "user.favourite_food",
+   "entities": [
+    "spicy food"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-03",
+   "valid_to": null,
+   "recorded_at": "2025-02-03",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-03",
+   "source": "I like spicy food, the spicier the better."
+  },
+  {
+   "id": "f_cbf910e1",
+   "kind": "decision",
+   "statement": "User started using Notion to organise tasks.",
+   "slot": "user.editor",
+   "entities": [
+    "notion"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-04",
+   "valid_to": null,
+   "recorded_at": "2025-02-04",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-04",
+   "source": "I recently started using Notion to organise my tasks."
+  },
+  {
+   "id": "f_97459137",
+   "kind": "fact",
+   "statement": "User usually visits their parents on weekends in the afternoon.",
+   "slot": null,
+   "entities": [
+    "user"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-05",
+   "valid_to": null,
+   "recorded_at": "2025-02-05",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-05",
+   "source": "On weekends I usually visit my parents in the afternoon."
+  },
+  {
+   "id": "f_df3973ff",
+   "kind": "decision",
+   "statement": "User bought a standing desk.",
+   "slot": "user.editor",
+   "entities": [
+    "user"
+   ],
+   "triggers": [],
+   "valid_from": "2025-01-01",
+   "valid_to": null,
+   "recorded_at": "2025-02-07",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-07",
+   "source": "I bought a standing desk last month and it really helps my back."
+  },
+  {
+   "id": "f_20bcfc9b",
+   "kind": "decision",
+   "statement": "User is trying to read one book every month this year.",
+   "slot": "user.hobby",
+   "entities": [],
+   "triggers": [],
+   "valid_from": "2025-01-01",
+   "valid_to": null,
+   "recorded_at": "2025-02-08",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-08",
+   "source": "I'm trying to read one book every month this year."
+  },
+  {
+   "id": "f_955a10e6",
+   "kind": "event",
+   "statement": "User is planning a trip to Cox's Bazar in April with Tanvir.",
+   "slot": null,
+   "entities": [
+    "user",
+    "tanvir"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-10",
+   "valid_to": null,
+   "recorded_at": "2025-02-10",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-10",
+   "source": "Tanvir and I are planning a trip to Cox's Bazar in April."
+  },
+  {
+   "id": "f_c1317aaa",
+   "kind": "decision",
+   "statement": "User's team uses GitHub for code reviews.",
+   "slot": "project.frontend_framework",
+   "entities": [
+    "github"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-12",
+   "valid_to": null,
+   "recorded_at": "2025-02-12",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-12",
+   "source": "Our team uses GitHub for code reviews and we have strict pull request rules."
+  },
+  {
+   "id": "f_6c70185e",
+   "kind": "constraint",
+   "statement": "User's team has strict pull request rules.",
+   "slot": "project.deadline",
+   "entities": [],
+   "triggers": [
+    "code reviews",
+    "pull requests",
+    "team collaboration",
+    "software development",
+    "version control",
+    "project management"
+   ],
+   "valid_from": "2025-02-12",
+   "valid_to": null,
+   "recorded_at": "2025-02-12",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-12",
+   "source": "Our team uses GitHub for code reviews and we have strict pull request rules."
+  },
+  {
+   "id": "f_e6598a69",
+   "kind": "fact",
+   "statement": "User has started learning to play the ukulele.",
+   "slot": "user.hobby",
+   "entities": [
+    "ukulele"
+   ],
+   "triggers": [],
+   "valid_from": "2025-02-14",
+   "valid_to": null,
+   "recorded_at": "2025-02-14",
+   "invalidated_at": null,
+   "superseded_by": null,
+   "mentions": 1,
+   "last_seen": "2025-02-14",
+   "source": "I've started learning to play the ukulele, it's harder than it looks."
+  }
+ ],
+ "supersedes": []
+}

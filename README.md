@@ -4,6 +4,7 @@ A working demo of **Episodic Schema Distillation (ESD)**: long-term chat memory 
 
 - The plain-English plan is in [plan.md](plan.md).
 - The build checklist and its status are in [tasks.md](tasks.md).
+- **Deploying on a VPS with Coolify?** See [DEPLOY.md](DEPLOY.md). The only setting is `OPENAI_API_KEY`.
 - **Presenting?** Read [docs/ESD_Presentation_Guide.docx](docs/ESD_Presentation_Guide.docx): verified demo prompts, how each method works, and answers to likely faculty questions.
 
 ![Demo screen: chat on the left, our memory graph (top right) and the standard Graph RAG graph (bottom right)](docs/screenshot.png)
