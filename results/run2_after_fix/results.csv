@@ -1,0 +1,41 @@
+scenario,category,assistant,assistant_name,passed,judge_reason,prompt_tokens,memory_tokens,history_tokens,latency_s
+s1_allergy,hidden rule,no_memory,No memory,False,The recipe provides a standard almond-flour recipe without mentioning the nut allergy.,234,0,993,7.25
+s1_allergy,hidden rule,full_history,Full history,True,The recipe clearly specifies to ensure all ingredients are nut-free and provides a nut-free alternative.,1217,993,993,5.4
+s1_allergy,hidden rule,vector_rag,Vector RAG,False,"The recipe provides a standard almond-flour recipe without any warning about the presence of nuts, which is unsafe for users with nut allergies.",331,101,993,7.41
+s1_allergy,hidden rule,graph_rag,Standard Graph RAG,False,"The recipe provides a standard almond-flour macaron recipe without any warning about the presence of nuts, which is unsafe for someone with a nut allergy.",267,40,993,6.77
+s1_allergy,hidden rule,esd,ESD-Lite (ours),True,The recipe provides a nut-free alternative using shredded coconut instead of almond flour.,466,247,993,5.38
+s2_database,changed decision,no_memory,No memory,False,"The code connects to SQLite, which does not meet the criterion of connecting to MongoDB.",230,0,1105,3.74
+s2_database,changed decision,full_history,Full history,True,The code correctly connects to a MongoDB database using the pymongo library.,1325,1105,1105,3.41
+s2_database,changed decision,vector_rag,Vector RAG,True,The code correctly connects to a MongoDB database using the pymongo library.,341,115,1105,3.25
+s2_database,changed decision,graph_rag,Standard Graph RAG,False,"The code connects to PostgreSQL, which does not meet the pass criterion.",275,52,1105,5.91
+s2_database,changed decision,esd,ESD-Lite (ours),True,The code correctly connects to a MongoDB database using the pymongo library.,512,297,1105,4.72
+s3_budget,budget,no_memory,No memory,False,The answer does not provide any laptop options or adhere to the $500 budget.,232,0,988,1.25
+s3_budget,budget,full_history,Full history,True,All recommended laptops are suitable for a budget of $500.,1210,988,988,2.85
+s3_budget,budget,vector_rag,Vector RAG,True,All recommended laptops are priced at or under $500.,333,105,988,2.6
+s3_budget,budget,graph_rag,Standard Graph RAG,False,"The recommended laptops are all priced above $500, failing to meet the budget criterion.",274,49,988,3.81
+s3_budget,budget,esd,ESD-Lite (ours),True,All recommended laptops are priced at or under $500.,450,233,988,5.18
+s4_timeline,timeline,no_memory,No memory,False,"The answer states it does not know the city, which does not meet the criterion.",225,0,1103,1.17
+s4_timeline,timeline,full_history,Full history,True,The answer correctly states that the city is Chittagong.,1318,1103,1103,2.95
+s4_timeline,timeline,vector_rag,Vector RAG,True,The answer correctly states that the city is Chittagong.,340,119,1103,1.1
+s4_timeline,timeline,graph_rag,Standard Graph RAG,False,The answer states it does not know the city you lived in back in February.,261,43,1103,2.18
+s4_timeline,timeline,esd,ESD-Lite (ours),True,The answer correctly states that you lived in Chittagong.,504,294,1103,2.05
+s5_multihop,multi-hop,no_memory,No memory,False,The answer does not suggest any specific cake.,225,0,1090,0.84
+s5_multihop,multi-hop,full_history,Full history,True,"The answer suggests specific cakes (vanilla sponge, strawberry shortcake, lemon cake) that do not contain chocolate.",1305,1090,1090,1.18
+s5_multihop,multi-hop,vector_rag,Vector RAG,True,The answer suggests specific cakes (vanilla sponge and strawberry shortcake) that do not contain chocolate.,313,92,1090,1.43
+s5_multihop,multi-hop,graph_rag,Standard Graph RAG,True,The answer suggests specific cakes (vanilla and lemon) that do not contain chocolate.,263,45,1090,2.35
+s5_multihop,multi-hop,esd,ESD-Lite (ours),True,"The answer suggests specific cakes (vanilla, red velvet, fruit-flavored, lemon, funfetti) and none contain chocolate.",485,275,1090,2.83
+s6_goal,goal,no_memory,No memory,False,"The plan suggests finishing the night at a local bar or pub for drinks, which implies the consumption of alcohol.",227,0,990,2.37
+s6_goal,goal,full_history,Full history,True,The plan explicitly suggests non-alcoholic drinks and does not mention alcohol or cocktails.,1207,990,990,2.57
+s6_goal,goal,vector_rag,Vector RAG,True,The plan does not mention any alcoholic drinks or bar-hopping.,316,93,990,2.18
+s6_goal,goal,graph_rag,Standard Graph RAG,False,The plan suggests finishing the night at a bar or café for drinks without explicitly mentioning non-alcoholic options.,254,34,990,3.48
+s6_goal,goal,esd,ESD-Lite (ours),True,The plan does not mention any alcoholic drinks or bar-hopping.,502,290,990,3.45
+s7_diet_change,changed rule,no_memory,No memory,False,"The suggestion includes chicken, which is a type of non-fish meat.",228,0,1111,1.74
+s7_diet_change,changed rule,full_history,Full history,True,The suggestion includes fish (salmon) and does not mention any non-fish meat or imply that the user cannot eat fish.,1329,1111,1111,3.79
+s7_diet_change,changed rule,vector_rag,Vector RAG,True,"The suggestion includes shrimp, which is a type of fish, and does not include any non-fish meat.",333,109,1111,3.21
+s7_diet_change,changed rule,graph_rag,Standard Graph RAG,True,The suggestion includes only plant-based ingredients and does not mention any non-fish meat.,255,34,1111,4.36
+s7_diet_change,changed rule,esd,ESD-Lite (ours),True,"The suggestion includes shrimp, which is fish, and does not mention any non-fish meat.",502,289,1111,5.12
+s8_meetings,negative rule,no_memory,No memory,False,"The response does not propose a specific time for the standup, thus failing to meet the criterion.",231,0,986,0.99
+s8_meetings,negative rule,full_history,Full history,True,"The proposed standup time is 10:00 AM, which meets the criterion.",1207,986,986,2.01
+s8_meetings,negative rule,vector_rag,Vector RAG,True,"The proposed standup time is 10:00 AM, which meets the pass criterion.",345,118,986,2.37
+s8_meetings,negative rule,graph_rag,Standard Graph RAG,False,The proposed standup time is before 10:00 AM.,268,44,986,5.14
+s8_meetings,negative rule,esd,ESD-Lite (ours),True,"The proposed standup time is 10:30 AM, which is after 10:00 AM.",492,276,986,3.92

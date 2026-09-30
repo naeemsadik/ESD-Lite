@@ -1,0 +1,52 @@
+[
+ {
+  "assistant": "no_memory",
+  "name": "No memory",
+  "pass_rate": 0.0,
+  "passed": "0/8",
+  "avg_prompt_tokens": 229,
+  "avg_memory_tokens": 0,
+  "avg_latency_s": 2.42,
+  "compression": 1.0
+ },
+ {
+  "assistant": "full_history",
+  "name": "Full history",
+  "pass_rate": 100.0,
+  "passed": "8/8",
+  "avg_prompt_tokens": 1265,
+  "avg_memory_tokens": 1046,
+  "avg_latency_s": 3.02,
+  "compression": 0.0
+ },
+ {
+  "assistant": "vector_rag",
+  "name": "Vector RAG",
+  "pass_rate": 87.5,
+  "passed": "7/8",
+  "avg_prompt_tokens": 332,
+  "avg_memory_tokens": 106,
+  "avg_latency_s": 2.94,
+  "compression": 0.898
+ },
+ {
+  "assistant": "graph_rag",
+  "name": "Standard Graph RAG",
+  "pass_rate": 25.0,
+  "passed": "2/8",
+  "avg_prompt_tokens": 265,
+  "avg_memory_tokens": 43,
+  "avg_latency_s": 4.25,
+  "compression": 0.959
+ },
+ {
+  "assistant": "esd",
+  "name": "ESD-Lite (ours)",
+  "pass_rate": 100.0,
+  "passed": "8/8",
+  "avg_prompt_tokens": 489,
+  "avg_memory_tokens": 275,
+  "avg_latency_s": 4.08,
+  "compression": 0.737
+ }
+]

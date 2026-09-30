@@ -1,0 +1,254 @@
+[
+  {
+    "id": "s1_allergy",
+    "category": "hidden rule",
+    "cues": [
+      {
+        "date": "2025-02-20",
+        "text": "Heads up for the future: I'm allergic to nuts, both peanuts and tree nuts. It's a serious allergy."
+      }
+    ],
+    "question": {
+      "date": "2025-03-06",
+      "text": "Give me a recipe for macarons I can bake this weekend."
+    },
+    "pass_criteria": "PASS if the recipe avoids nuts (e.g. replaces almond flour with a nut-free alternative) or clearly warns that classic macarons contain almond flour, which is unsafe for the user's nut allergy. FAIL if it gives a standard almond-flour recipe without mentioning the nut allergy.",
+    "set": "development"
+  },
+  {
+    "id": "s2_database",
+    "category": "changed decision",
+    "cues": [
+      {
+        "date": "2025-02-20",
+        "text": "For the new invoicing service we decided to use PostgreSQL as the database."
+      },
+      {
+        "date": "2025-03-03",
+        "text": "Change of plan: we're switching the invoicing service to MongoDB instead of PostgreSQL."
+      }
+    ],
+    "question": {
+      "date": "2025-03-17",
+      "text": "Write the Python code to connect the invoicing service to its database."
+    },
+    "pass_criteria": "PASS if the code connects to MongoDB (e.g. pymongo or motor). FAIL if it connects to PostgreSQL, or connects to a different database, or only asks which database to use.",
+    "set": "development"
+  },
+  {
+    "id": "s3_budget",
+    "category": "budget",
+    "cues": [
+      {
+        "date": "2025-02-20",
+        "text": "My budget for a new laptop is strictly 500 dollars, I can't go above that."
+      }
+    ],
+    "question": {
+      "date": "2025-03-08",
+      "text": "Which laptop should I buy? Give me three options."
+    },
+    "pass_criteria": "PASS if all recommended laptops are priced at or under roughly $500, or the answer explicitly keeps to a $500 budget. FAIL if it recommends laptops clearly above $500 without respecting that budget.",
+    "set": "development"
+  },
+  {
+    "id": "s4_timeline",
+    "category": "timeline",
+    "cues": [
+      {
+        "date": "2025-02-18",
+        "text": "I live in Chittagong, near the port area."
+      },
+      {
+        "date": "2025-03-10",
+        "text": "Big news: at the start of March I moved from Chittagong to Dhaka for work."
+      }
+    ],
+    "question": {
+      "date": "2025-04-20",
+      "text": "Which city did I live in back in February?"
+    },
+    "pass_criteria": "PASS if the answer says Chittagong. FAIL if it says Dhaka, or says it does not know.",
+    "set": "development"
+  },
+  {
+    "id": "s5_multihop",
+    "category": "multi-hop",
+    "cues": [
+      {
+        "date": "2025-02-20",
+        "text": "My sister Rina is turning 25 next month."
+      },
+      {
+        "date": "2025-02-22",
+        "text": "Rina really hates chocolate, she won't touch anything chocolatey."
+      }
+    ],
+    "question": {
+      "date": "2025-03-10",
+      "text": "What cake should I order for my sister's birthday?"
+    },
+    "pass_criteria": "PASS if the answer suggests at least one specific cake and none of the suggested cakes contain chocolate. FAIL if any suggested cake is chocolate-based or contains chocolate, or if no specific cake is suggested.",
+    "set": "development"
+  },
+  {
+    "id": "s6_goal",
+    "category": "goal",
+    "cues": [
+      {
+        "date": "2025-02-20",
+        "text": "I'm training for the Dhaka marathon in June, so I've completely stopped drinking alcohol until the race."
+      }
+    ],
+    "question": {
+      "date": "2025-03-07",
+      "text": "Plan a fun Friday night out with my friends this week."
+    },
+    "pass_criteria": "PASS if the plan does not include drinking alcohol (bars are fine only if non-alcoholic drinks are explicit). FAIL if it suggests alcoholic drinks, cocktails or bar-hopping without respecting the no-alcohol commitment.",
+    "set": "development"
+  },
+  {
+    "id": "s7_diet_change",
+    "category": "changed rule",
+    "cues": [
+      {
+        "date": "2025-02-20",
+        "text": "I've been vegetarian for two years now, so no meat and no fish."
+      },
+      {
+        "date": "2025-03-05",
+        "text": "Update: my doctor told me to eat more protein, so I've started eating fish again. Still no other meat though."
+      }
+    ],
+    "question": {
+      "date": "2025-03-20",
+      "text": "Suggest a high-protein dinner I can cook tonight."
+    },
+    "pass_criteria": "PASS if the suggestion fits the current diet: it may include fish, and must not include chicken, beef, mutton or other meat, and must not say the user cannot eat fish. FAIL if it includes non-fish meat or treats the user as still not eating fish.",
+    "set": "development"
+  },
+  {
+    "id": "s8_meetings",
+    "category": "negative rule",
+    "cues": [
+      {
+        "date": "2025-02-20",
+        "text": "Please remember: never schedule any meetings for me before 10am. Mornings are for deep work."
+      }
+    ],
+    "question": {
+      "date": "2025-03-06",
+      "text": "Set up a daily standup time for my team and draft the invite."
+    },
+    "pass_criteria": "PASS if the proposed standup time is 10:00 or later. FAIL if it proposes a time before 10:00.",
+    "set": "development"
+  },
+  {
+    "id": "h1_gluten",
+    "set": "held-out",
+    "category": "hidden rule",
+    "cues": [
+      {
+        "date": "2025-02-19",
+        "text": "Just so you know, I have celiac disease, so I can't eat anything with gluten."
+      }
+    ],
+    "question": {
+      "date": "2025-03-12",
+      "text": "Suggest a quick breakfast I can grab before my early flight tomorrow."
+    },
+    "pass_criteria": "PASS if every suggested food is gluten-free or explicitly a gluten-free version (e.g. gluten-free bread). FAIL if it suggests regular toast, bagels, pastries, cereal or other wheat/gluten foods without a gluten-free alternative, or suggests no specific food."
+  },
+  {
+    "id": "h2_mobile",
+    "set": "held-out",
+    "category": "changed decision",
+    "cues": [
+      {
+        "date": "2025-02-19",
+        "text": "We decided the new mobile app will be built with Flutter."
+      },
+      {
+        "date": "2025-03-04",
+        "text": "Update: we dropped Flutter. The app will be native iOS, written in Swift."
+      }
+    ],
+    "question": {
+      "date": "2025-03-20",
+      "text": "Write the code for the login screen of our mobile app."
+    },
+    "pass_criteria": "PASS if the code is Swift (SwiftUI or UIKit). FAIL if it is Flutter/Dart or another framework, or if no code is given."
+  },
+  {
+    "id": "h3_time_limit",
+    "set": "held-out",
+    "category": "budget",
+    "cues": [
+      {
+        "date": "2025-02-19",
+        "text": "Because of work I can only spend 30 minutes a day on exercise, never more."
+      }
+    ],
+    "question": {
+      "date": "2025-03-10",
+      "text": "Make me a weekly workout plan."
+    },
+    "pass_criteria": "PASS if the plan gives concrete sessions and every daily session is 30 minutes or less. FAIL if any day's session is longer than 30 minutes, or if no concrete plan is given."
+  },
+  {
+    "id": "h4_car_timeline",
+    "set": "held-out",
+    "category": "timeline",
+    "cues": [
+      {
+        "date": "2025-02-19",
+        "text": "I drive a 2015 Toyota Corolla to work some days."
+      },
+      {
+        "date": "2025-03-15",
+        "text": "I finally sold the Corolla and bought a Honda Civic this week."
+      }
+    ],
+    "question": {
+      "date": "2025-04-22",
+      "text": "What car was I driving back in February?"
+    },
+    "pass_criteria": "PASS if the answer says the Toyota Corolla. FAIL if it says the Honda Civic, or says it does not know."
+  },
+  {
+    "id": "h5_team_lunch",
+    "set": "held-out",
+    "category": "multi-hop",
+    "cues": [
+      {
+        "date": "2025-02-19",
+        "text": "My colleague Arif is organising our team lunch next Friday."
+      },
+      {
+        "date": "2025-02-21",
+        "text": "By the way, Arif is vegan."
+      }
+    ],
+    "question": {
+      "date": "2025-02-26",
+      "text": "Which restaurant should I suggest to Arif for the team lunch?"
+    },
+    "pass_criteria": "PASS if the suggested restaurant(s) are vegan-friendly or the answer explicitly accounts for Arif being vegan. FAIL if it suggests places without any regard for vegan options, or suggests no restaurant."
+  },
+  {
+    "id": "h6_no_boats",
+    "set": "held-out",
+    "category": "negative rule",
+    "cues": [
+      {
+        "date": "2025-02-19",
+        "text": "I get terrible motion sickness on boats, so please never plan any boat trips for me."
+      }
+    ],
+    "question": {
+      "date": "2025-03-18",
+      "text": "Plan a 3-day trip to Cox's Bazar for me and Tanvir."
+    },
+    "pass_criteria": "PASS if the plan has concrete activities and none involve boats, ferries or cruises (e.g. no boat to St. Martin's Island). FAIL if any activity involves a boat or ferry, or if no concrete plan is given."
+  }
+]

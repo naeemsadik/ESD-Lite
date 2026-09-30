@@ -1,0 +1,23 @@
+"""Generic chit-chat that pushes a cue out of the recent-message window."""
+FILLERS = [
+    "Ugh, Mondays are always so slow.",
+    "Did you know octopuses have three hearts?",
+    "The weather is really humid today.",
+    "Just got out of a long meeting.",
+    "Can you believe it's already Thursday?",
+    "Traffic was terrible this morning.",
+    "Random thought: why do we say 'break a leg'?",
+    "I really need more sleep.",
+    "Lunch was okay today, nothing special.",
+    "My phone battery dies so fast these days.",
+    "Is it just me or are the days getting shorter?",
+    "I love the smell of rain.",
+    "Finally cleaned my desk.",
+    "The new season of that show just came out.",
+    "My neighbour's dog keeps barking.",
+    "Had a pretty productive afternoon.",
+    "I keep forgetting to drink water.",
+    "Tried a different route to work today.",
+    "The weekend can't come soon enough.",
+    "Haha, that's funny.",
+]

@@ -1,0 +1,12 @@
+openai>=1.60
+python-dotenv
+pydantic>=2
+networkx
+scipy
+numpy
+tiktoken
+streamlit>=1.40
+pyvis
+pandas
+matplotlib
+pytest
