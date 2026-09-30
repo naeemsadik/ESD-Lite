@@ -4,6 +4,7 @@ A working demo of **Episodic Schema Distillation (ESD)**: long-term chat memory 
 
 - The plain-English plan is in [plan.md](plan.md).
 - The build checklist and its status are in [tasks.md](tasks.md).
+- **Presenting?** Read [docs/ESD_Presentation_Guide.docx](docs/ESD_Presentation_Guide.docx): verified demo prompts, how each method works, and answers to likely faculty questions.
 
 ![Demo screen: chat on the left, our memory graph (top right) and the standard Graph RAG graph (bottom right)](docs/screenshot.png)
 
@@ -20,21 +21,23 @@ Final run: 30 Sep 2026, `gpt-4o-mini`, temperature 0. 14 tests × 5 assistants, 
 | Assistant | Rules respected | Development tests (8) | Held-out tests (6) | Avg tokens sent per question |
 |---|---|---|---|---|
 | **ESD-Lite (ours)** | **14/14** | 8/8 | 6/6 | 488 |
-| Full history | 14/14 | 8/8 | 6/6 | 1,261 |
-| Vector RAG | 13/14 | 7/8 | 6/6 | 329 |
-| Standard Graph RAG | 7/14 | 2/8 | 5/6 | 271 |
-| No memory | 2/14 | 0/8 | 2/6 | 229 |
+| Full history | 13/14 | 8/8 | 5/6 | 1,263 |
+| Vector RAG | 13/14 | 7/8 | 6/6 | 331 |
+| Standard Graph RAG | 9/14 | 4/8 | 5/6 | 275 |
+| No memory | 2/14 | 0/8 | 2/6 | 231 |
 
 **What this shows:**
-- **Hidden links:** on the nut allergy → macarons test, only ours and full history passed. Vector RAG and standard Graph RAG both gave a classic almond-flour recipe.
-- **Changed facts and dates:** standard Graph RAG kept both databases (it wrote PostgreSQL code) and couldn't say which city or car was the right one for February. Ours marks old facts as replaced and keeps their dates.
-- **Cost:** full history was just as accurate here, but it sent 2.6× more tokens, and that grows with every message. Our Memory Card is capped at 300 tokens. See the growth chart on the Results page.
+- **Hidden links:** on the nut allergy → macarons test, vector RAG and standard Graph RAG both gave a classic almond-flour recipe. Ours swapped the flour.
+- **Changed facts and dates:** standard Graph RAG couldn't say which city or car was the right one for February, because it stores no dates. Ours marks old facts as replaced and keeps when each was true.
+- **Pasting everything isn't enough:** full history had the "no boats" rule in its prompt and still suggested banana-boat rides.
+- **Cost:** full history sent 2.6× more tokens than ours, and that grows with every message. Our Memory Card is capped at 300 tokens. See the growth chart on the Results page.
 
 **Limits (read before quoting these numbers):**
-- **Small sample.** 14 tests is small, and our lead over vector RAG is a single test.
-- **Development tests guided the build.** A failure in run 1 (ours 7/8, see [results/run1_before_fix](results/run1_before_fix)) led to one retriever fix: replaced facts can now answer questions about the past. The 6 held-out tests were written after all fixes and were not used for tuning. They turned out easier than hoped (vector RAG 6/6).
-- **The examiner is also `gpt-4o-mini`.** A hand check of answers found two lenient marks, both for "No memory":
-  - On the cake test it passed by suggesting nothing. The criterion was tightened and the answers re-marked.
+- **Small sample.** 14 tests is small, and our lead over the next best methods is a single test each.
+- **Results vary between runs.** Scores move by a test or two, mostly for standard Graph RAG (7/14 in run 3, 9/14 in run 4), because its extracted triples differ each time. Earlier runs are kept in `results/run1_before_fix`, `run2_after_fix` and `run3_before_date_fix`.
+- **Development tests guided the build.** Run 1 (ours 7/8) led to the retriever fix for questions about the past. A presentation check led to the extractor fix for relative dates ("this week"). The 6 held-out tests were written after the retriever fix and were not used for tuning.
+- **The examiner is also `gpt-4o-mini`.** A hand check found two lenient marks, both for "No memory":
+  - On the cake test it passed by suggesting nothing. The criterion was tightened.
   - On the gluten test it passed while suggesting granola, which is usually not gluten-free. This one is left as marked.
 
 ## Setup (Windows, PowerShell)
@@ -60,7 +63,7 @@ python scripts/check_api.py # should print a reply and "length 1536"
 | Re-mark saved answers after changing a pass criterion | `python eval/run_eval.py --rejudge` |
 | Offline tests (no key needed) | `python -m pytest` |
 
-Before presenting, open the sidebar (the `>` at the top left) and click **Load demo history** once. It reads a ~40-message "background life" into both memories. After that it is saved and loads instantly. The talk track, with what a rehearsal actually showed, is in [docs/demo_script.md](docs/demo_script.md).
+Before presenting, open the sidebar (the `>` at the top left) and click **Load demo history** once. It reads a ~40-message "background life" into both memories. After that it is saved and loads instantly. The short talk track is in [docs/demo_script.md](docs/demo_script.md); the full guide is [docs/ESD_Presentation_Guide.docx](docs/ESD_Presentation_Guide.docx).
 
 ## How it maps to the research spec
 

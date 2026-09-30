@@ -94,3 +94,12 @@ def test_both_panels_share_the_node_limit_and_esd_draws_the_path(monkeypatch):
     html = draw_graph_rag(a, None, [], None, height=280)
     nodes = html.split("nodes = new vis.DataSet(")[1].split(");")[0]
     assert nodes.count('"id":') <= MAX_NODES
+
+
+def test_esd_graph_ignores_answers_from_an_older_memory(monkeypatch):
+    install(monkeypatch, fake_parse)
+    g = _esd_graph()
+    stale = {"used": ["f_gone", "f_mg"], "prompt_tokens": 1,
+             "extra": {"hits": [{"fact_id": "f_gone", "via": "x"}, {"fact_id": "f_mg", "via": None, "through": "e:gone"}],
+                       "seed_entities": {"e:gone": {"via": "x", "score": 0.9}}}}
+    assert "vis-network" in draw_esd(g, stale, "old question", height=280)

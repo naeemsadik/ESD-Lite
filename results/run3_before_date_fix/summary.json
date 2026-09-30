@@ -6,21 +6,21 @@
   "passed": "2/14",
   "passed_development": "0/8",
   "passed_held_out": "2/6",
-  "avg_prompt_tokens": 231,
+  "avg_prompt_tokens": 229,
   "avg_memory_tokens": 0,
-  "avg_latency_s": 2.3,
+  "avg_latency_s": 2.79,
   "compression": 1.0
  },
  {
   "assistant": "full_history",
   "name": "Full history",
-  "pass_rate": 92.9,
-  "passed": "13/14",
+  "pass_rate": 100.0,
+  "passed": "14/14",
   "passed_development": "8/8",
-  "passed_held_out": "5/6",
-  "avg_prompt_tokens": 1263,
+  "passed_held_out": "6/6",
+  "avg_prompt_tokens": 1261,
   "avg_memory_tokens": 1042,
-  "avg_latency_s": 3.07,
+  "avg_latency_s": 3.28,
   "compression": 0.0
  },
  {
@@ -30,22 +30,22 @@
   "passed": "13/14",
   "passed_development": "7/8",
   "passed_held_out": "6/6",
-  "avg_prompt_tokens": 331,
+  "avg_prompt_tokens": 329,
   "avg_memory_tokens": 105,
-  "avg_latency_s": 3.2,
+  "avg_latency_s": 2.85,
   "compression": 0.9
  },
  {
   "assistant": "graph_rag",
   "name": "Standard Graph RAG",
-  "pass_rate": 64.3,
-  "passed": "9/14",
-  "passed_development": "4/8",
+  "pass_rate": 50.0,
+  "passed": "7/14",
+  "passed_development": "2/8",
   "passed_held_out": "5/6",
-  "avg_prompt_tokens": 275,
-  "avg_memory_tokens": 51,
-  "avg_latency_s": 4.03,
-  "compression": 0.951
+  "avg_prompt_tokens": 271,
+  "avg_memory_tokens": 49,
+  "avg_latency_s": 4.51,
+  "compression": 0.953
  },
  {
   "assistant": "esd",
@@ -55,8 +55,8 @@
   "passed_development": "8/8",
   "passed_held_out": "6/6",
   "avg_prompt_tokens": 488,
-  "avg_memory_tokens": 272,
-  "avg_latency_s": 4.85,
-  "compression": 0.739
+  "avg_memory_tokens": 274,
+  "avg_latency_s": 4.81,
+  "compression": 0.737
  }
 ]

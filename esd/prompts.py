@@ -3,6 +3,7 @@
 The only thing that differs between assistants is the memory block they
 put under the line.
 """
+from datetime import date
 
 ASSISTANT_PROMPT = """You are a helpful personal assistant with long-term memory of earlier conversations with this user.
 Today's date is {ts}.
@@ -19,7 +20,9 @@ Below the line is your memory ({label}). Use it:
 
 
 def build_messages(ts: str, label: str, block: str, recent: list[dict], question: str) -> list[dict]:
-    system = ASSISTANT_PROMPT.format(ts=ts, label=label, block=block.strip() or "(empty)")
+    day = date.fromisoformat(ts[:10])
+    system = ASSISTANT_PROMPT.format(ts=f"{day.isoformat()} ({day:%A})", label=label,
+                                     block=block.strip() or "(empty)")
     return (
         [{"role": "system", "content": system}]
         + [{"role": m["role"], "content": m["content"]} for m in recent]

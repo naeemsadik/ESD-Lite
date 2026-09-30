@@ -1,4 +1,6 @@
 """Step 1, Listen: turn one user message into typed facts (spec 4.1)."""
+from datetime import date, timedelta
+
 from . import llm
 from .models import Extraction, ExtractedFact
 
@@ -20,9 +22,22 @@ Rules:
 - valid_from: ISO date (YYYY-MM-DD) when this became true in the user's life. Resolve relative dates ("last March", "since yesterday") using TODAY. If unknown, use TODAY."""
 
 
+def calendar(ts: str) -> str:
+    """Anchor dates worked out in code, so the model picks a date instead of doing date arithmetic."""
+    d = date.fromisoformat(ts[:10])
+    monday = d - timedelta(days=d.weekday())
+    first = d.replace(day=1)
+    last_month = (first - timedelta(days=1)).replace(day=1)
+    return (
+        f"{d.isoformat()} ({d:%A}). Yesterday: {d - timedelta(days=1)}. "
+        f"This week started Monday {monday}; last week started Monday {monday - timedelta(days=7)}. "
+        f"This month started {first}; last month started {last_month}."
+    )
+
+
 def extract(user_msg: str, ts: str, known_slots: list[str]) -> list[ExtractedFact]:
     user = (
-        f"TODAY: {ts}\n"
+        f"TODAY: {calendar(ts)}\n"
         f"KNOWN SLOTS: {', '.join(known_slots) if known_slots else '(none)'}\n\n"
         f"USER MESSAGE:\n{user_msg}"
     )

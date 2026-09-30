@@ -1,0 +1,71 @@
+scenario,set,category,assistant,assistant_name,passed,judge_reason,prompt_tokens,memory_tokens,history_tokens,latency_s
+s1_allergy,development,hidden rule,no_memory,No memory,False,The recipe provides a standard almond-flour recipe without mentioning the nut allergy.,234,0,993,7.65
+s1_allergy,development,hidden rule,full_history,Full history,True,The recipe clearly specifies to ensure all ingredients are nut-free due to the user's allergy.,1217,993,993,8.61
+s1_allergy,development,hidden rule,vector_rag,Vector RAG,False,"The recipe provides a standard almond-flour recipe without any warning about the presence of nuts, which is unsafe for someone with a nut allergy.",331,101,993,7.92
+s1_allergy,development,hidden rule,graph_rag,Standard Graph RAG,False,The recipe provides a standard almond-flour recipe without mentioning the nut allergy.,267,40,993,6.86
+s1_allergy,development,hidden rule,esd,ESD-Lite (ours),True,"The recipe provides a nut-free alternative using coconut instead of almond flour, which meets the criterion.",466,247,993,6.92
+s2_database,development,changed decision,no_memory,No memory,False,"The code connects to SQLite, which does not meet the criterion of connecting to MongoDB.",230,0,1105,4.85
+s2_database,development,changed decision,full_history,Full history,True,The code correctly connects to a MongoDB database using the pymongo library.,1325,1105,1105,3.43
+s2_database,development,changed decision,vector_rag,Vector RAG,True,The code correctly connects to a MongoDB database using the pymongo library.,341,115,1105,2.9
+s2_database,development,changed decision,graph_rag,Standard Graph RAG,False,"The code connects to PostgreSQL, which does not meet the pass criterion.",275,52,1105,4.96
+s2_database,development,changed decision,esd,ESD-Lite (ours),True,The code correctly connects to a MongoDB database using the pymongo library.,512,297,1105,4.89
+s3_budget,development,budget,no_memory,No memory,False,"The recommended laptops are all likely priced above $500, failing to meet the budget criterion.",232,0,988,2.53
+s3_budget,development,budget,full_history,Full history,True,All recommended laptops are suitable for a budget of $500.,1210,988,988,2.75
+s3_budget,development,budget,vector_rag,Vector RAG,True,All recommended laptops are priced at or under $500.,333,105,988,2.3
+s3_budget,development,budget,graph_rag,Standard Graph RAG,False,The recommended laptops are all priced above $500.,274,49,988,4.56
+s3_budget,development,budget,esd,ESD-Lite (ours),True,All recommended laptops are priced at or under $500.,413,196,988,4.26
+s4_timeline,development,timeline,no_memory,No memory,False,"The answer states it does not know the city, which does not meet the criterion.",225,0,1103,1.0
+s4_timeline,development,timeline,full_history,Full history,True,The answer correctly states that the city is Chittagong.,1318,1103,1103,0.96
+s4_timeline,development,timeline,vector_rag,Vector RAG,True,The answer correctly states that the city is Chittagong.,340,119,1103,1.17
+s4_timeline,development,timeline,graph_rag,Standard Graph RAG,False,The answer states it does not know the city you lived in back in February.,261,43,1103,3.49
+s4_timeline,development,timeline,esd,ESD-Lite (ours),True,The answer correctly states that the city is Chittagong.,504,294,1103,2.22
+s5_multihop,development,multi-hop,no_memory,No memory,False,The answer does not suggest any specific cake.,225,0,1090,1.0
+s5_multihop,development,multi-hop,full_history,Full history,True,"The answer suggests specific cakes (vanilla sponge, strawberry shortcake, lemon cake) that do not contain chocolate.",1305,1090,1090,1.17
+s5_multihop,development,multi-hop,vector_rag,Vector RAG,True,The answer suggests specific cakes (vanilla sponge and strawberry shortcake) that do not contain chocolate.,313,92,1090,1.09
+s5_multihop,development,multi-hop,graph_rag,Standard Graph RAG,True,The answer suggests specific cakes (vanilla and lemon) that do not contain chocolate.,263,45,1090,2.05
+s5_multihop,development,multi-hop,esd,ESD-Lite (ours),True,The answer suggests specific cakes (vanilla or fruit-flavored) and does not include any chocolate-based options.,485,275,1090,3.58
+s6_goal,development,goal,no_memory,No memory,False,"The plan suggests finishing the night at a local bar or lounge for drinks, which implies the possibility of alcohol consumption.",227,0,990,2.34
+s6_goal,development,goal,full_history,Full history,True,The plan does not mention any alcoholic drinks or bar-hopping.,1207,990,990,2.46
+s6_goal,development,goal,vector_rag,Vector RAG,True,The plan does not mention any alcoholic drinks or bar-hopping.,316,93,990,1.84
+s6_goal,development,goal,graph_rag,Standard Graph RAG,False,The plan suggests finishing the night at a bar or café for drinks without specifying non-alcoholic options.,254,34,990,2.98
+s6_goal,development,goal,esd,ESD-Lite (ours),True,"The plan explicitly mentions looking for a place that offers creative mocktails or non-alcoholic beverages, adhering to the no-alcohol commitment.",499,287,990,4.32
+s7_diet_change,development,changed rule,no_memory,No memory,False,"The suggestion includes chicken, which is a type of non-fish meat.",228,0,1111,2.32
+s7_diet_change,development,changed rule,full_history,Full history,True,The suggestion includes fish (salmon) and does not mention any non-fish meat or imply that the user cannot eat fish.,1329,1111,1111,3.85
+s7_diet_change,development,changed rule,vector_rag,Vector RAG,True,"The suggestion includes shrimp, which is fish, and does not mention any non-fish meat.",333,109,1111,2.55
+s7_diet_change,development,changed rule,graph_rag,Standard Graph RAG,True,"The suggestion includes chickpeas and quinoa, which are high in protein, and does not include any non-fish meat.",255,34,1111,4.42
+s7_diet_change,development,changed rule,esd,ESD-Lite (ours),True,"The suggestion includes shrimp, which is fish, and does not mention any non-fish meat.",499,286,1111,5.79
+s8_meetings,development,negative rule,no_memory,No memory,False,"The response does not propose a specific time for the standup, thus failing to meet the criterion.",231,0,986,0.98
+s8_meetings,development,negative rule,full_history,Full history,True,"The proposed standup time is 10:00 AM, which meets the criterion.",1207,986,986,2.45
+s8_meetings,development,negative rule,vector_rag,Vector RAG,True,"The proposed standup time is 10:00 AM, which meets the pass criterion.",345,118,986,2.21
+s8_meetings,development,negative rule,graph_rag,Standard Graph RAG,False,"The proposed standup time is 9:00 AM, which is before 10:00.",268,44,986,3.65
+s8_meetings,development,negative rule,esd,ESD-Lite (ours),True,"The proposed standup time starts at 10 AM, which meets the criterion.",479,263,986,3.77
+h1_gluten,held-out,hidden rule,no_memory,No memory,True,All suggested foods are gluten-free or do not contain gluten.,228,0,985,2.8
+h1_gluten,held-out,hidden rule,full_history,Full history,True,"Both suggested options, a gluten-free protein bar and a smoothie, are gluten-free.",1203,985,985,2.24
+h1_gluten,held-out,hidden rule,vector_rag,Vector RAG,True,"All suggested foods (banana and granola bar) can be gluten-free, and the smoothie option does not include any gluten-containing ingredients.",305,81,985,2.07
+h1_gluten,held-out,hidden rule,graph_rag,Standard Graph RAG,True,"All suggested foods (banana and granola bar) can be gluten-free, and the smoothie option does not include any gluten-containing ingredients.",256,35,985,3.92
+h1_gluten,held-out,hidden rule,esd,ESD-Lite (ours),True,All suggested foods are gluten-free options.,504,291,985,3.64
+h2_mobile,held-out,changed decision,no_memory,No memory,False,"The code provided is written in Flutter/Dart, which does not meet the criterion for Swift.",230,0,1097,5.64
+h2_mobile,held-out,changed decision,full_history,Full history,True,"The code provided is written in Swift using SwiftUI, which meets the criterion.",1317,1097,1097,6.25
+h2_mobile,held-out,changed decision,vector_rag,Vector RAG,True,"The code provided is written in Swift using SwiftUI, which meets the criterion.",342,116,1097,5.14
+h2_mobile,held-out,changed decision,graph_rag,Standard Graph RAG,True,"The code provided is written in Swift using SwiftUI, which meets the criterion.",268,45,1097,8.68
+h2_mobile,held-out,changed decision,esd,ESD-Lite (ours),True,"The code provided is written in Swift using UIKit, which meets the criterion.",493,278,1097,10.02
+h3_time_limit,held-out,budget,no_memory,No memory,False,The response does not provide a concrete workout plan and instead asks for additional information.,221,0,979,1.7
+h3_time_limit,held-out,budget,full_history,Full history,True,"The workout plan provides concrete sessions for each day, and all daily sessions are designed to be 30 minutes or less.",1190,979,979,5.31
+h3_time_limit,held-out,budget,vector_rag,Vector RAG,True,"The plan provides concrete sessions for each day, and all sessions are 30 minutes or less.",316,99,979,2.81
+h3_time_limit,held-out,budget,graph_rag,Standard Graph RAG,True,"The plan provides concrete sessions for each day, and all sessions are 30 minutes or less.",276,62,979,4.86
+h3_time_limit,held-out,budget,esd,ESD-Lite (ours),True,"The plan provides concrete sessions for each day, and all daily sessions are 30 minutes or less.",496,290,979,6.1
+h4_car_timeline,held-out,timeline,no_memory,No memory,False,The answer states it does not know the information.,228,0,1091,0.88
+h4_car_timeline,held-out,timeline,full_history,Full history,True,The answer correctly identifies the car as a Toyota Corolla.,1309,1091,1091,0.79
+h4_car_timeline,held-out,timeline,vector_rag,Vector RAG,True,The answer correctly identifies the car as a Toyota Corolla.,321,97,1091,1.48
+h4_car_timeline,held-out,timeline,graph_rag,Standard Graph RAG,False,The answer states it does not know the car you were driving in February.,263,42,1091,2.99
+h4_car_timeline,held-out,timeline,esd,ESD-Lite (ours),True,The answer correctly identifies the car as a Toyota Corolla.,493,280,1091,2.98
+h5_team_lunch,held-out,multi-hop,no_memory,No memory,False,The answer does not suggest any specific restaurant and fails to account for Arif being vegan.,230,0,1086,1.04
+h5_team_lunch,held-out,multi-hop,full_history,Full history,True,The answer explicitly accounts for Arif being vegan and suggests a vegan-friendly restaurant.,1306,1086,1086,1.28
+h5_team_lunch,held-out,multi-hop,vector_rag,Vector RAG,True,The answer explicitly accounts for Arif being vegan and suggests vegan-friendly restaurants.,333,107,1086,2.19
+h5_team_lunch,held-out,multi-hop,graph_rag,Standard Graph RAG,True,The answer explicitly accounts for Arif being vegan and suggests a vegan-friendly restaurant.,302,79,1086,3.99
+h5_team_lunch,held-out,multi-hop,esd,ESD-Lite (ours),True,The answer explicitly accounts for Arif being vegan and suggests vegan-friendly restaurants.,486,271,1086,3.36
+h6_no_boats,held-out,negative rule,no_memory,No memory,True,"The itinerary includes concrete activities that do not involve any boats, ferries, or cruises.",234,0,982,4.36
+h6_no_boats,held-out,negative rule,full_history,Full history,True,"The itinerary includes concrete activities that do not involve any boats, ferries, or cruises.",1206,982,982,4.41
+h6_no_boats,held-out,negative rule,vector_rag,Vector RAG,True,"The plan includes concrete activities that do not involve boats, ferries, or cruises.",343,113,982,4.29
+h6_no_boats,held-out,negative rule,graph_rag,Standard Graph RAG,True,"The itinerary includes concrete activities and does not involve any boats, ferries, or cruises.",307,80,982,5.73
+h6_no_boats,held-out,negative rule,esd,ESD-Lite (ours),True,"The itinerary includes concrete activities and does not involve any boats, ferries, or cruises.",504,285,982,5.56

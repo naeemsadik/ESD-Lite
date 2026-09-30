@@ -101,10 +101,11 @@ def draw_esd(graph: MemoryGraph, answer: dict | None, question: str | None, heig
     if not graph.facts:
         return _empty(height, "Our memory is empty. Start chatting, or load the demo history.")
 
-    used = set(answer["used"]) if answer else set()
+    # An answer saved in a chat may point at facts from before a memory reset or reload.
+    used = {u for u in answer["used"] if u in graph.facts} if answer else set()
     extra = answer.get("extra", {}) if answer else {}
     hits = {h["fact_id"]: h for h in extra.get("hits", []) if h["fact_id"] in used}
-    seed_ents = extra.get("seed_entities", {})
+    seed_ents = {e: v for e, v in extra.get("seed_entities", {}).items() if e in graph.g}
 
     def visible_entities(fid: str) -> list[str]:
         return [e for e in graph.fact_entity_ids(fid) if graph.entity_name(e) not in HIDDEN_ENTITIES]

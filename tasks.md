@@ -43,6 +43,8 @@ Work top to bottom. Each task has a time box, the files to touch, and a **Done w
 - **A weak nut-free answer:** the shared answer prompt now says to check every suggested item against the user's rules. It applies to all assistants, and temperature is 0.
 - **A false claim in the demo:** the current method does *not* send ever-growing text; it sends only what its keyword match finds. The cost comparison is now against full history, shown in the app and in the growth chart.
 - **A false pass:** "No memory" passed the cake test by suggesting nothing. The criterion now requires an actual suggestion, and the saved answers were re-marked.
+- **Relative dates:** "at the start of this week" was resolved to the wrong day. The extractor now gets anchor dates worked out in code (yesterday, this week's and last week's Monday, month starts), and the shared answer prompt includes the weekday. Run 3 is archived; run 4 is final.
+- **A crash after a memory reload:** chats holding answers from before a memory reset crashed the top graph. Missing facts are now skipped, and a regression test covers it.
 - **A lenient mark, left as is:** in the final run, "No memory" passed the gluten test while suggesting granola, which is usually not gluten-free. It's noted in the README, not re-marked.
 - **Record of earlier runs:** `results/run1_before_fix/` and `results/run2_after_fix/`.
 
