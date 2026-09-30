@@ -17,7 +17,7 @@
 | **Owns** | Steps 4–6: question expansion, trigger words, seeding, Personalized PageRank, the scoring formula, the 300-token Memory Card, the shared answer prompt, and the 70/30 app with both live graphs |
 | **Files** | `esd/retriever.py`, `esd/memory_card.py`, `esd/chat.py`, `esd/prompts.py`, `app.py`, `esd/visualize.py`, `esd/chats.py` |
 | **Presents** | How a question finds hidden links (macaron → almond flour → nut allergy), then **runs the live demo**: the six questions, pointing at both graphs |
-| **Demo moment** | Questions 1–6: the ⭐ path in the top graph, and "What the current method answered" |
+| **Demo moment** | Questions 1–6: the ⭐ path in the top graph, and "Compare with the current method" under each answer |
 | **Must be able to answer** | What Personalized PageRank is, why 300 tokens, why 4 seed places are reserved for the question's own matches, how old facts answer questions about the past, and why ours is slower (the extra expansion call) |
 
 ## Part 3: The comparison and evaluation (baselines, benchmark, results)

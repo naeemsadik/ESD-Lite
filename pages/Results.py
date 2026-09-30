@@ -10,10 +10,14 @@ from esd import config, llm
 from esd.demo import load_background
 from eval.fillers import FILLERS
 
-st.set_page_config(page_title="ESD Memory: Results", page_icon="📊", layout="wide")
-st.title("📊 Results: five ways of remembering, same tests")
+st.set_page_config(page_title="ESD Memory: Results", page_icon=":material/bar_chart:", layout="wide")
+st.title("Results")
+st.markdown("Five ways of remembering, tested on the same conversations.")
 
-BLUE, GREY = "#2a78d6", "#a3a29d"
+DARK = (st.context.theme.type or "light") == "dark"
+# Our method keeps the app accent; every other method is neutral grey. Pass/fail use the theme green/red.
+BLUE, GREY = ("#3987E5", "#6B7483") if DARK else ("#2A78D6", "#A3A29D")
+PASS, FAIL = ("#3FB07A", "#E5645A") if DARK else ("#1E7B45", "#C8372D")
 summary_path = config.RESULTS_DIR / "summary.json"
 answers_path = config.RESULTS_DIR / "answers.json"
 
@@ -55,15 +59,19 @@ if summary_path.exists():
             "than the full conversation history in these tests."
         )
 
-    st.subheader("Pass / fail per test")
+    st.subheader("Pass or fail, per test")
     names = dict(zip(summary["assistant"], summary["name"]))
     grid = (
-        rows.assign(mark=rows["passed"].map({True: "✅", False: "❌"}), name=rows["assistant"].map(names))
+        rows.assign(mark=rows["passed"].map({True: "Pass", False: "Fail"}), name=rows["assistant"].map(names))
         .pivot_table(index=["set", "scenario", "category"], columns="name", values="mark", aggfunc="first")
         .reindex(columns=list(summary["name"]))
         .reset_index()
     )
-    st.dataframe(grid, hide_index=True, height=(len(grid) + 1) * 35 + 3)  # every test visible, no scrolling
+    marks = list(summary["name"])
+    styled = grid.style.map(
+        lambda v: f"color: {PASS}; font-weight: 700" if v == "Pass" else (f"color: {FAIL}; font-weight: 700" if v == "Fail" else ""),
+        subset=marks)
+    st.dataframe(styled, hide_index=True, height=(len(grid) + 1) * 35 + 3)  # every test visible, no scrolling
 
     st.subheader("At a glance")
     summary["group"] = summary["assistant"].map(lambda k: "Our method" if k == "esd" else "Other methods")
@@ -109,6 +117,7 @@ if crossover:
 if summary_path.exists():
     with st.expander("Read every answer and the examiner's reason"):
         for _, r in rows.sort_values(["scenario", "assistant"]).iterrows():
-            st.markdown(f"**{r['scenario']} · {names.get(r['assistant'], r['assistant'])} · "
-                        f"{'✅ pass' if r['passed'] else '❌ fail'}**: {r['judge_reason']}")
+            verdict = "Pass" if r["passed"] else "Fail"
+            st.markdown(f"**{r['scenario']}, {names.get(r['assistant'], r['assistant'])}: {verdict}.** "
+                        f"{r['judge_reason']}")
             st.text(r["answer"][:1500])

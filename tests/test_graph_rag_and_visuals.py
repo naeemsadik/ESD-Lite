@@ -3,7 +3,9 @@ import json
 from baselines.graph_rag import GraphRAGAssistant, Keywords, Triple, Triples
 from esd.graph_store import MemoryGraph
 from esd.models import Fact
-from esd.visualize import MAX_NODES, draw_esd, draw_graph_rag
+from esd.visualize import MAX_NODES, PALETTES, draw_esd, draw_graph_rag
+
+LIGHT = PALETTES["light"]
 
 from .fakes import install
 
@@ -64,7 +66,7 @@ def test_both_graphs_render(monkeypatch):
     a.observe("We use PostgreSQL", "2025-02-20")
     a.observe("Switching to MongoDB", "2025-03-03")
     html = draw_graph_rag(a, None, a.conflicts(g.changes()), None, height=280)
-    assert "vis-network" in html and "#e5484d" in html
+    assert "vis-network" in html and LIGHT["conflict"] in html
 
 
 def test_both_panels_share_the_node_limit_and_esd_draws_the_path(monkeypatch):
@@ -84,7 +86,7 @@ def test_both_panels_share_the_node_limit_and_esd_draws_the_path(monkeypatch):
     nodes = html.split("nodes = new vis.DataSet(")[1].split(");")[0]
     assert nodes.count('"id":') <= MAX_NODES + 1  # limit, plus the question star
     drawn = json.loads(html.split("edges = new vis.DataSet(")[1].split(");")[0])
-    gold = {(e["from"], e["to"]) for e in drawn if e.get("color") == "#f5a623"}
+    gold = {(e["from"], e["to"]) for e in drawn if e.get("color") == LIGHT["amber"]}
     # question -> matched fact -> shared entity -> linked fact, all in gold
     assert {("Q", "f_sister"), ("f_sister", "e:rina"), ("f_choc", "e:rina")} <= gold
 

@@ -13,7 +13,7 @@ The demo screen puts **our memory graph** next to the **standard Graph RAG graph
 
 | Left 70% | Right 30% |
 |---|---|
-| Chat with the assistant. You can open multiple chats, move the date forward, and compare the two methods' answers under each reply | **Top:** our graph (ESD). **Bottom:** the current method (standard Graph RAG). Each panel has an **⤢ Enlarge** button. |
+| Chat with the assistant. You can open multiple chats, move the date forward, and compare the two methods' answers under each reply | **Top:** our graph (ESD). **Bottom:** the current method (standard Graph RAG). Each panel has an **Enlarge** button. |
 
 ## Results
 

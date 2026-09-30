@@ -186,15 +186,15 @@ Everything that happens **when a question arrives**: finding the relevant facts 
   - colours by kind; old facts grey with an orange "replaced by" arrow
   - the ⭐ question with the gold path it followed
 - [`draw_graph_rag()` (line 198)](esd/visualize.py#L198) draws the bottom graph, with conflicts in red.
-- Both graphs are limited to **40 points** each, so the comparison is fair. Each panel has an **⤢ Enlarge** button.
+- Both graphs are limited to **40 points** each, so the comparison is fair. Each panel has an **Enlarge** button.
 - The sidebar has: Load demo history (instant, from a saved snapshot), Reset everything, and the compare toggle.
 
 ### Your presentation (about 6 minutes, mostly live)
 1. **Retrieval in one breath (1 min).** Expand the question, match facts and triggers, follow links, always keep rules, fit to 300 tokens.
 2. **The live demo (5 min).** Follow [docs/demo_script.md](docs/demo_script.md) exactly:
    - 8 set-up messages, then two **+1 week** clicks
-   - 6 questions, each in a **➕ New chat**
-   - after each answer, open **"What the current method answered"**
+   - 6 questions, each in a **New chat**
+   - after each answer, open **"Compare with the current method"**: the current method's answer on the left, our Memory Card on the right
    - point at the ⭐ path in the top graph and the red conflict in the bottom graph
 3. **Say this line:** *"The current method's answers aren't random. It matched 'standing desk' to 'daily standup' and 'banana bread' to 'macarons'. Similar words aren't the same as relevant meaning."*
 
@@ -233,7 +233,7 @@ Everything that happens **when a question arrives**: finding the relevant facts 
 - [ ] **Run the full demo at least twice** on the presentation laptop, with the internet connection you'll have on the day.
 - [ ] Practise **Enlarge**, zooming by scrolling, and hovering over a point to show its dates.
 - [ ] Practise recovery: sidebar → **Reset everything** → **Load demo history** (takes 2 seconds).
-- [ ] Open a Details expander under an answer, and read out the Memory Card and "why these facts".
+- [ ] Open **Compare with the current method** under an answer, and read out the Memory Card and "Why it was picked".
 - [ ] Explain your part to Farhan and Abid without slides.
 
 ### Weaknesses to admit if asked

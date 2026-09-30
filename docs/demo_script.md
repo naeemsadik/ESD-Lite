@@ -27,7 +27,7 @@ After step 7, point at the graphs:
 - **Top:** PostgreSQL turns grey, with a "replaced by" arrow.
 - **Bottom:** PostgreSQL and MongoDB are both still stored as true, shown in red.
 
-## Questions (click **➕ New chat** before each one)
+## Questions (click **New chat** before each one)
 
 | # | Question | Ours | Current method |
 |---|---|---|---|

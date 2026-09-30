@@ -14,14 +14,28 @@ On the first start, the container copies in a ready-made demo snapshot, so **Loa
 
 ## Steps
 
-1. **Push the project to GitHub.** A private repository is fine. `.env` and `data/` are git-ignored, so your key and your local chats are never uploaded.
-2. **In Coolify:** create a new **Resource**, pick your repository, and choose the **Docker Compose** build pack. The Compose file location is `/docker-compose.yml`.
-3. **Environment Variables:** add **`OPENAI_API_KEY`** = your key. That is the only variable. If it's missing, the deploy stops with an error rather than starting a broken app.
-4. **Domain:** Coolify generates a URL automatically, from `SERVICE_FQDN_ESD_8501` in the Compose file. To use your own domain, set the service's domain to `https://esd.yourdomain.com:8501`. The `:8501` tells Coolify which container port to use; visitors still use normal HTTPS on port 443.
-5. **Deploy.** The first build takes a few minutes, mostly installing Python packages. The container reports healthy once `/_stcore/health` answers.
-6. **Open the URL.** In the sidebar, click **Reset everything**, then **Load demo history**, and follow [docs/demo_script.md](docs/demo_script.md).
+> **Pushing to GitHub does not deploy anything by itself.** Coolify only builds a repository after you add it as a resource (steps 1–5). After that, you either press **Deploy** yourself or set up auto-deploy (step 7).
 
-**Updating:** push to GitHub, then press **Redeploy** in Coolify. The `esd-data` volume, and with it your memories and chats, is kept.
+The repository is `https://github.com/naeemsadik/ESD-Lite` (public), branch **`main`**. `.env` and `data/` are git-ignored, so your key and your local chats are not in it.
+
+1. **Open a project.** In Coolify, go to **Projects**, open a project (or create one), and pick an environment such as **production**.
+2. **Add the repository.** Click **+ New** → **Public Repository**. Paste `https://github.com/naeemsadik/ESD-Lite` and click **Check repository**.
+3. **Build settings:**
+   - **Branch:** `main`
+   - **Build Pack:** change it from Nixpacks to **Docker Compose**
+   - **Base Directory:** `/`
+   - **Docker Compose Location:** `/docker-compose.yml`
+
+   Then click **Continue**.
+4. **Environment Variables tab:** add `OPENAI_API_KEY` with your key as the value. That is the only variable. If it's missing, the deploy stops with an error rather than starting a broken app.
+5. **Domain.** Coolify generates a URL automatically, from `SERVICE_FQDN_ESD_8501` in the Compose file; it appears on the service in the **General** tab. To use your own domain instead, set it to `https://esd.yourdomain.com:8501`. The `:8501` tells Coolify which container port to use; visitors still use normal HTTPS.
+6. **Click Deploy** (top right). Watch the **Deployments** tab: the first build takes a few minutes, mostly installing Python packages. When the status turns **Running (healthy)**, open the URL. In the sidebar, click **Reset everything**, then **Load demo history**, and follow [docs/demo_script.md](docs/demo_script.md).
+7. **Optional: auto-deploy on every push.**
+   1. In the resource, open the **Webhooks** tab. Copy the **GitHub** webhook URL and set a webhook secret.
+   2. On GitHub, go to repository **Settings → Webhooks → Add webhook**. Paste the URL, set content type to `application/json`, use the same secret, and choose the "push" event.
+   3. Alternatively, connect Coolify's **GitHub App** and add the repository through it (**+ New → Private Repository (with GitHub App)**). That enables auto-deploy automatically.
+
+**Updating:** push to GitHub, then press **Redeploy** in Coolify (or let the webhook do it). The `esd-data` volume, and with it your memories and chats, is kept.
 
 ## Before you share the URL
 
